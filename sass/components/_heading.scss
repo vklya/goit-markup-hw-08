@@ -1,0 +1,6 @@
+.section__heading {
+    // margin-bottom: 50px;
+    // @include text ($tea:center, $fow:700, $fos:36px, $lih:42px);
+    @include text ($tea: center, $fow: 700, $fos: 28px, $lih: 33px);
+    margin-bottom: 30px;
+}

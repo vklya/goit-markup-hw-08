@@ -1,0 +1,25 @@
+@mixin flex ($d:flex, $jc:center, $ai:center) {
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin calc ($qgap, $gp, $q) {
+    flex-basis: calc((100% - #{$qgap} * #{$gp}) / $q);
+}
+
+@mixin transit ($pr, $dur:250ms, $tf:cubic-bezier(0.4, 0, 0.2, 1)) {
+    transition-property: $pr;
+    transition-duration: $dur;
+    transition-timing-function: $tf;
+}
+
+@mixin text ($fof:inherit, $tea:left, $fow:400, $fos, $lih:auto, $les:0.03em, $tet:none) {
+    font-family: $fof;
+    text-align: $tea;
+    font-weight: $fow;
+    font-size: $fos;
+    line-height: $lih;
+    letter-spacing: $les;
+    text-transform: $tet;
+}

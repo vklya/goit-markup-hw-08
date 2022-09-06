@@ -1,0 +1,61 @@
+.hero {
+
+    max-width: 100%;
+    padding: 118px 0;
+    margin-left: auto;
+    margin-right: auto;
+    // max-width: 1600px;
+    // padding: 200px 0;
+    
+    text-align: center;
+    background-color: $bgd-color;
+    background-image:
+        linear-gradient($translucent-bgd-color, $translucent-bgd-color),
+        url(../images/hero-mob.jpg);
+    background-size: cover;
+
+    @media screen and (min-resolution: 2dppx) {
+            background-image: url(../images/hero-mob2x.jpg);
+        }
+
+    @media screen and (min-width: 480px) {
+        background-image: url(../images/hero-tab.jpg);
+
+        @media screen and (min-resolution: 2dppx) {
+            background-image: url(../images/hero-tab2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/hero-top.jpg);
+
+        @media screen and (min-resolution: 2dppx) {
+            background-image: url(../images/hero-top2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        & .container {
+            padding: 0;
+            width: 360px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        & .container {
+            width: 696px;
+        }
+    }
+}
+
+
+
+.hero__header {
+    margin-bottom: 30px;
+    @include text (inherit, center, 900, 26px, 42px, 0.06em, uppercase);
+
+    @media screen and (min-width: 1200px) {
+        @include text (inherit, center, 900, 44px, 60px, 0.06em, uppercase);
+    }    
+    color: $white-color;
+}

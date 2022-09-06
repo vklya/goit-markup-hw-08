@@ -1,0 +1,30 @@
+.features {
+    // @include flex;
+    // gap: $gap;
+}
+
+.features__item {
+    // @include calc (3, 30px, 4);
+}
+
+.features__box {
+    @include flex;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $milk-color;
+    border-radius: 4px;
+}
+
+.features__title {
+    // width: 270px;
+    margin-bottom: 10px;
+    @include text ($tea: center, $fow:700, $fos:14px, $lih: 16px, $tet:uppercase);
+
+}
+
+.features__descr {
+    // width: 270px;
+    @include text ($fow: 400, $fos: 14px, $lih: 24px);
+    color: $p-color;
+}

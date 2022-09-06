@@ -1,0 +1,23 @@
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    // @include flex;
+    border: 1px solid $border-btn-color;
+    border-radius: 50%;
+    background: $white-color;
+    cursor: pointer;
+}
+
+.close__icon {
+    fill: $black-color;
+    @include transit (fill);
+
+    .close:hover &,
+    .close:focus & {
+        fill: $accent-color;
+    }
+}
+

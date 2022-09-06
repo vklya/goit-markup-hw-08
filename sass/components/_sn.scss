@@ -1,0 +1,35 @@
+.social {
+    @include flex;
+    gap: 10px;
+}
+
+.social__link {
+    @include flex;
+    width: 44px;
+    height: 44px;
+    background-color: inherit;
+    border-radius: 50%;
+
+    .footer__div & {
+        background-color: $translucent-white-color;
+        fill: $white-color;
+    }
+
+    @include transit (background-color);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.social__icon {
+    fill: $sn-icon-color;
+
+    .social__link:hover &,
+    .social__link:focus & {
+        fill: $white-color;
+    }
+    
+    @include transit (fill);
+}

@@ -1,0 +1,105 @@
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.menu {
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white-color;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 48px;
+    transform: translate(0) scale(1);
+    opacity: 1;
+    @include transit (transform);
+    
+    & > .menu-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 15px;
+
+    @media screen and (min-width: 480px) {
+        max-width: 480px;
+    }
+}
+
+.menu-btn__open {
+    border: none;
+    background-color: transparent;
+    padding: 10px 0;
+
+    @include transit (fill);
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}    
+
+.menu__icon {
+    color: $black-color;
+}
+
+.menu-btn__close {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 10px 0;
+    @include transit (fill);
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+.menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.menu__link {
+    @include text ($fow: 500,
+        $fos: 30px,
+        $lih: 1.13,
+        $les: 0.02em);
+    @include transit (color);
+
+    @media screen and (min-width: 480px) {
+        @include text ($fow: 500,
+            $fos: 40px,
+            $lih: 1.18,
+            $les: 0.02em);
+        }
+
+    &:hover,
+    &:focus,
+    &--current {
+        color: $accent-color;
+    }
+}
+
+.menu-connect__tel {
+    margin-bottom: 32px;
+}

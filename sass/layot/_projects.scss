@@ -1,0 +1,22 @@
+.projects {
+    // @include flex;
+    // flex-wrap: wrap;
+    // gap: $gap;
+    @media screen and (min-width: 480px) {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+    
+}
+
+.projects__item {
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+
+        &:not(:last-child) {
+            margin-bottom: $gap;
+        }
+    }
+    // @include calc (2, $gap, 3);
+}

@@ -1,0 +1,29 @@
+.send {
+    // @include flex;
+    // gap: 12px;
+}
+
+.send__email {
+    // width: 358px;
+    width: 100%;
+    height: 50px;
+    padding: 16px 15px;
+    margin-bottom: 20px;
+    background-color: inherit;
+    border: 1px solid $email-border-color;
+    border-radius: 4px;
+    color: $white-color;
+    cursor: pointer;
+    @include transit (border-color);
+
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-color: $accent-color;
+    }
+
+    &::placeholder {
+        color: $clear-gray-color;
+    }
+}

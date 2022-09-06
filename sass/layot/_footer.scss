@@ -1,0 +1,53 @@
+footer {
+    background-color: $bgd-color;
+    padding: 60px 0;
+}
+
+.page-footer {
+    text-align: center;
+    // @include flex;    
+    // @include flex ($jc:left, $ai:baseline);
+}
+
+.footer__div {
+    margin-top: 60px;
+    // margin-left: 70px;
+
+    // &--alignment {
+    //     margin-left: auto;
+    // }
+}
+
+
+.page-footer__heading {
+    display: inline-block;
+    margin-bottom: 20px;
+    @include text (inherit, center, 700, 14px, 16px, 0.03em, uppercase);
+    color: $white-color;
+}
+
+address {
+    margin-top: 20px;
+}
+
+.address__location {
+    @include text ($fos: 14px, $lih: 24px);
+    color: $white-color;
+    font-style: normal;
+    color: $white-color;
+}
+
+.address__contacts {
+    @include text ($fos:14px, $lih:24px);
+    font-style: normal;
+    color: $clear-gray-color;
+}
+
+.address__item {
+    margin-top: 8px;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 9px;
+    }
+}
+
