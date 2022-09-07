@@ -3,8 +3,8 @@
     top: 8px;
     right: 8px;
     width: 30px;
-    height: 30px;
-    // @include flex;
+    height: 30px;    
+    @include flex;
     border: 1px solid $border-btn-color;
     border-radius: 50%;
     background: $white-color;

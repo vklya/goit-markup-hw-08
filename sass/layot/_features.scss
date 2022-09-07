@@ -1,10 +1,25 @@
 .features {
-    // @include flex;
-    // gap: $gap;
+    @media screen and (min-width: 768px) {
+        @include flex;
+            flex-wrap: wrap;
+            gap: $gap;
+    }
 }
 
 .features__item {
-    // @include calc (3, 30px, 4);
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: $gap;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        @include calc (1, $gap, 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include calc (3, $gap, 4);
+    }
 }
 
 .features__box {
@@ -17,14 +32,14 @@
 }
 
 .features__title {
-    // width: 270px;
     margin-bottom: 10px;
     @include text ($tea: center, $fow:700, $fos:14px, $lih: 16px, $tet:uppercase);
-
+    @media screen and (min-width: 768px) {
+            text-align: left;;
+        }
 }
 
 .features__descr {
-    // width: 270px;
     @include text ($fow: 400, $fos: 14px, $lih: 24px);
     color: $p-color;
 }

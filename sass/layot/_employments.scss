@@ -1,20 +1,20 @@
 .employments {
-    // @include flex;
-    // gap: $gap;
+    @include flex;
+    gap: $gap;
 }
 
 .employments__item {
-    // position: relative;
-    // width: 370px;
+    position: relative;
+    width: 370px;
 }
 
 .employments__title {
-    // position: absolute;
-    // bottom: 0;
-    // width: 100%;
-    // height: 70px;
-    // @include flex;
-    // @include text (inherit, center, 700, 14px, 16px, 0.03em, uppercase);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    @include flex;
+    @include text (inherit, center, 700, 14px, 16px, 0.03em, uppercase);
     color: $white-color;
     background-color: $label-bgd-color;
 }

@@ -1,5 +1,7 @@
 .product {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     @include transit (box-shadow);
 
     &:hover,
@@ -10,6 +12,7 @@
 }
 
 .product__descr {
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid $light-gray-color;
     background-color: $white-color;
@@ -20,7 +23,6 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100%;
 
 }
 
@@ -28,7 +30,8 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     padding: 77px 24px;
 
     @media screen and (min-width: 768px) {
@@ -50,7 +53,6 @@
         transform: translateY(0);
     }
 }
-
 
 .product__name {
     margin-bottom: 4px;

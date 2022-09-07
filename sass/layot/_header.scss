@@ -7,13 +7,20 @@ header {
     @media screen and (max-width: 1199px) {
         @include flex ($jc: space-between);
     }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        height: 80px;
+    }
 }
 
 .nav {
     @media screen and (max-width:767px) {
         display: none;
     }
-
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
 }
 
 .nav__list {
@@ -22,8 +29,8 @@ header {
 }
 
 .nav__link {
-    @include text ($les: 0.02em, $fow: 500, $fos: 14px, $lih: 16px);
     padding: 32px 0;
+    @include text ($les: 0.02em, $fow: 500, $fos: 14px, $lih: 16px);
     color: inherit;
 
     &--current {
@@ -71,35 +78,41 @@ header {
                 }
             }
     }
-    // @include text ($les:0.06em, $fow:500, $fos: 14px, $lih: 16px);
-    
 }
 
 .contacts {
     @media screen and (max-width:767px) {
         display: none;
     }
-    // @include flex;
-    // margin-left: auto;
-    // gap: 50px;
+
+    @media screen and (min-width:1200px) {
+        display: flex;;
+        margin-left: auto;
+        gap: 50px;
+    }
+    
+}
+
+.contacts__item {
+    margin-bottom: 10px;
+    
 }
 
 .contacts__link {
-    padding: 5px 0;
+    @include flex ($jc: start);
     @include text ($les: 0.02em,
                 $fow: 500,
                 $fos: 12px,
                 $lih: 14px);
     color: $p-color;
     @media screen and (min-width: 1200px) {
-        @include flex ($jc: space-between);
+        padding: 32px 0;
+        @include flex ($ai: center, $jc: space-between);
         @include text ($les: 0.02em,
                     $fow: 500,
                     $fos: 14px,
                     $lih: 16px);
     }
-    // padding: 32px 0;
-    // @include flex;
 }
 
 .contacts__icon {
@@ -110,6 +123,18 @@ header {
     &:hover,
     &:focus {
         fill: currentColor;
+    }
+
+    @media screen and (max-width: 1199px) {
+        &--mail {
+            width: 14px;
+            height: 10px;
+        }
+            
+        &--tel {
+            width: 10px;
+            height: 14px;
+        }
     }
 
     @media screen and (min-width: 1200px) {

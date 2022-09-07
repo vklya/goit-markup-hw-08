@@ -5,17 +5,40 @@ footer {
 
 .page-footer {
     text-align: center;
-    // @include flex;    
-    // @include flex ($jc:left, $ai:baseline);
+    @media screen and (min-width: 1200px) {
+        @include flex ($jc: left, $ai: baseline);
+        text-align: left;
+    }
 }
 
-.footer__div {
-    margin-top: 60px;
-    // margin-left: 70px;
+    .page-footer__tab {
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            @include flex ($ai: baseline);
+            gap: 165px;
+            margin-bottom: 60px;
+        }
+        
+        @media screen and (min-width:1200px) {
+            display: flex;
+            align-items: baseline;
+        }
+    }
 
-    // &--alignment {
-    //     margin-left: auto;
-    // }
+
+.footer__div {
+    @media screen and (max-width:767px) {
+        margin-top: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+        
+            &--alignment {
+                margin-left: auto;
+            }
+    }
+    
+    
 }
 
 

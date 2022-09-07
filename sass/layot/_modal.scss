@@ -31,8 +31,6 @@
         width: 528px;
         height: 581px;
     }
-    // @include flex;
-    // flex-direction: column;
     
     background: $white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -66,8 +64,6 @@
 
 .modal__div {
     position: relative;
-    // @include flex ($ai: left);
-    // flex-direction: column;
     margin-bottom: 10px;
 
     .modal__form &:nth-child(4) {
@@ -179,8 +175,10 @@
         flex-wrap: wrap;
     }
     
+    @media screen and (min-width: 1200px) {
+        @include text ($fos: 14px, $lih: 24px);
+    }
 
-    // @include text ($fos: 14px, $lih: 24px);
     font-style: normal;
     color: $p-color;
 }

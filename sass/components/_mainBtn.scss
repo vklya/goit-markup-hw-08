@@ -18,7 +18,7 @@
     }
 
     .send & {
-        // @include flex;
+        @include flex;
         fill: currentColor;
         gap: 10px;
     }

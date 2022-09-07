@@ -1,7 +1,7 @@
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector(".menu-btn__open"),
-    closeMenuBtn: document.querySelector(".menu-btn__close"),
+    openMenuBtn: document.querySelector(".menu__open"),
+    closeMenuBtn: document.querySelector(".menu__close"),
     menu: document.querySelector(".menu"),
     body: document.querySelector("body"),
     menuList: document.querySelector(".menu__list"),

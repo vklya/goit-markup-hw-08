@@ -7,6 +7,14 @@
 .clients__item {
     height: 92px;
     @include calc (1, $gap, 2);
+
+    @media screen and (min-width: 786px) {
+        @include calc (2, $gap, 3);
+    }
+
+    @media screen and (min-width: 786px) {
+        @include calc (5, $gap, 6);
+    }
 }
 
 .clients__link {

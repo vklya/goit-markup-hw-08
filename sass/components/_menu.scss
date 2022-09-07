@@ -7,12 +7,17 @@
 .menu {
     position: fixed;
     z-index: 2;
-    width: 100vw;
-    height: 100vh;
-    background-color: $white-color;
     top: 0;
     padding-top: 10px;
+    padding-left: 40px;
     padding-bottom: 48px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $white-color;
+    overflow: auto;
     transform: translate(0) scale(1);
     opacity: 1;
     @include transit (transform);
@@ -22,6 +27,7 @@
         justify-content: space-between;
         flex-direction: column;
         height: 100%;
+        padding-left: 0;
         overflow: auto;
     }
 
@@ -30,21 +36,11 @@
     }
 }
 
-.menu-container {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 15px;
-
-    @media screen and (min-width: 480px) {
-        max-width: 480px;
-    }
-}
-
-.menu-btn__open {
+.menu__open {
     border: none;
     background-color: transparent;
     padding: 10px 0;
+    cursor: pointer;
 
     @include transit (fill);
 
@@ -56,17 +52,20 @@
     @media screen and (min-width: 768px) {
         display: none;
     }
-}    
+}
+
 
 .menu__icon {
     color: $black-color;
 }
 
-.menu-btn__close {
+.menu__close {
     display: block;
+    padding: 0 15px;
+    margin-left: auto;
+    cursor: pointer;
     border: none;
-    background-color: transparent;
-    padding: 10px 0;
+        background-color: transparent;
     @include transit (fill);
 
     &:hover,
@@ -75,31 +74,66 @@
     }
 }
 
+.menu__list {
+    margin-bottom: 64px;
+}
+
 .menu__item:not(:last-child) {
     margin-bottom: 32px;
 }
 
 .menu__link {
     @include text ($fow: 500,
-        $fos: 30px,
-        $lih: 1.13,
+        $fos: 40px,
+        $lih: 47px,
         $les: 0.02em);
+    color: $main-color;
     @include transit (color);
-
-    @media screen and (min-width: 480px) {
-        @include text ($fow: 500,
-            $fos: 40px,
-            $lih: 1.18,
-            $les: 0.02em);
-        }
 
     &:hover,
     &:focus,
     &--current {
         color: $accent-color;
+        @include text ($fow: 500,
+            $fos: 40px,
+            $lih: 47px,
+            $les: 0.02em);
     }
 }
 
-.menu-connect__tel {
+.menu__tel {
     margin-bottom: 32px;
+    color: $accent-color;
+    @include text ($fow: 500,
+            $fos: 34px,
+            $lih: 40px,
+            $les: 0.02em);
 }
+
+.menu__mail {
+    @include text ($fow: 500,
+            $fos: 24px,
+            $lih: 28px,
+            $les: 0.02em);
+    color: $p-color;
+}
+
+.menu__socials {
+    @include flex ($jc: left);
+    flex-wrap: wrap;
+    @include text ($fow: 500,
+            $fos: 18px,
+            $lih: 22px,
+            $les: 0.02em);
+        color: $accent-color;
+}
+
+.menu__social:not(:first-child) {
+    padding-left: 5px;
+}
+
+.menu__social:not(:last-child) {
+    border-right: 1px solid $border-input-color;
+    padding-right: 5px;
+}
+
